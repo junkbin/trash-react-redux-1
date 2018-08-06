@@ -1,5 +1,8 @@
 
-const defaultState = {};
+const defaultState = {
+    "name" : "Affixus Systems Pvt Ltd.",
+    "type" : "Unknown"
+};
 
 const UserReducer = (state = defaultState, action)=>{
     switch (action.type) {
@@ -9,7 +12,7 @@ const UserReducer = (state = defaultState, action)=>{
         }
 
         case "UPDATE" : {
-            state = {...state, "desc": "Update User"};
+            state = {...state, "desc": "Update User", "name": action.payload.name};
             break;
         }
 
